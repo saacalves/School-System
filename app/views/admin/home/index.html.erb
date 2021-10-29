@@ -11,6 +11,9 @@
             <a class="nav-link active" aria-current="page" href="<%= admin_root_path %>">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="<%= admin_users_path %>">Usuários</a>
+          </li>
+          <li class="nav-item">
             <%= link_to "Sair", destroy_user_session_path, method: :delete, data: { confirm: "Deseja realmente sair #{current_user.email}?" }, class: 'nav-link' %>
           </li>
         </ul>

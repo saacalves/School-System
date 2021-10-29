@@ -1,0 +1,14 @@
+<h1>Detalhes</h1>
+
+<div>
+<h4>E-mail</h4>
+<%= @user.email %>
+</div>
+
+<div>
+<h4>Criando em</h4>
+<%= @user.created_at %>
+</div>
+
+
+<%= link_to 'Voltar', admin_users_path, class: 'btn btn-primary'%>
