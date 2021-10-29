@@ -21,6 +21,8 @@ gem 'sprockets'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails'
+gem 'devise'
+gem 'simple_form'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
