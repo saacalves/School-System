@@ -11,7 +11,7 @@
             <a class="nav-link active" aria-current="page" href="<%= admin_root_path %>">Home</a>
           </li>
           <li class="nav-item">
-            <%= link_to "Sair", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            <%= link_to "Sair", destroy_user_session_path, method: :delete, data: { confirm: "Deseja realmente sair #{current_user.email}?" }, class: 'nav-link' %>
           </li>
         </ul>
       </div>
@@ -21,7 +21,7 @@
 
 <main>
 
-  <div class="container marketing">
+  <div class="container marketing" style="margin-top: 50px;">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
