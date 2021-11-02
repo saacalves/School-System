@@ -12,6 +12,18 @@
   </head>
 
   <body class='hold-transition sidebar-mini'>
-    <%= yield %>
+    <div class="wrapper">
+      <!-- Navbar -->
+      <%= render 'shared/admin/navbar'%>
+      <!-- Aside -->
+      <%= render 'shared/admin/aside'%>
+
+      <%= yield %>
+
+      <!-- Control Sidebar -->
+      <%= render 'shared/admin/right_sidebar' %> 
+      <!-- Main Footer -->
+      <%= render 'shared/admin/footer' %> 
+    </div>
   </body>
 </html>
