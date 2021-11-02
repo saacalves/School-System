@@ -1,4 +1,4 @@
 //= require rails-ujs
-//= require jquery3
-//= require popper
-//= require bootstrap
+//= require adminlte/jquery.min
+//= require adminlte/bootstrap.adminlte
+//= require adminlte/adminlte
