@@ -1,24 +1,14 @@
-# README
+# School System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Instalation ruby 3.0.2 with your ruby manager
+2. Execute `gem install bundler` to instalation Bundler
+3. Execute `gem install rails -v=6.1.4`
+3. Execute `bundle install` to instalation all gems
+4. Create file `.env.local` and `.env.test` with the content: 
 
-Things you may want to cover:
+```
+DATABASE_URL=postgres://postgres:postgres@db:5432/school_system_capacitation
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5. Execute `rails db:create` and `rails db:migrate`
+6. Now, to started project, execute `rails server`
