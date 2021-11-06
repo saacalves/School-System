@@ -1,17 +1,22 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 4 } %>
-  url: <%= ENV.fetch('DATABASE_URL') %>
+  host: localhost
+  username: postgres
+  password: "123456"
 
 test:
   <<: *default
+  database: school_system_capacitation_test
 
 development:
   <<: *default
+  database: school_system_capacitation_development
 
 homolog:
   <<: *default
+  database: school_system_capacitation_homolog
 
 production:
   <<: *default
+  database: school_system_capacitation_production
