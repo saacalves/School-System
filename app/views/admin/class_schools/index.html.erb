@@ -1,0 +1,56 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <%= render partial: 'shared/admin/page_title', locals: { title: 'Turmas' } %>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-lg-12">
+          <div class="card card-primary card-outline">
+            <div class="card-header">
+              <h5 class="m-0">Listagem</h5>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Horários</th>
+                    <th scope="col">Durações</th>
+                    <th scope="col">Data de Início</th>
+                    <th scope="col">Data de Finalização</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @class_schools.each do |class_school| %>
+                    <tr>
+                      <th scope="row"><%= class_school.id %></th>
+                      <td><%= class_school.name %></td>
+                      <td><%= class_school.timetable %></td>
+                      <td><%= class_school.duration %></td>
+                      <td><%= class_school.start_date %></td>
+                      <td><%= class_school.end_date %></td>
+                      <td>
+                        <%= link_to 'Detalhes', admin_class_school_path(class_school), class: 'btn btn-warning' %>
+                        <%= link_to 'Editar', edit_admin_class_school_path(class_school), class: 'btn btn-primary' %>
+                        <%= link_to 'Excluir', admin_class_school_path(class_school), method: :delete, class: 'btn btn-danger', data: { confirm: 'Deseja realmente excluir?' } %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+              <%= link_to 'Novo', new_admin_class_school_path, class: 'btn btn-primary'%>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-6 -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

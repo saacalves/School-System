@@ -17,7 +17,16 @@
       <%= render 'shared/admin/navbar'%>
       <!-- Aside -->
       <%= render 'shared/admin/aside'%>
-
+      
+      <div style='text-align: center;'>
+        <% if flash[:notice].present?%>
+          <div class="alert alert-success alert-dismissible notice"><%=notice%></div>
+        <%end%>
+        
+        <% if flash[:alert].present?%>
+          <div class="alert alert-danger alert-dismissible alert"><%=alert%></div>
+        <%end%>
+      </div>
       <%= yield %>
 
       <!-- Control Sidebar -->
