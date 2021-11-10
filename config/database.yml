@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   host: localhost
   username: postgres
-  password: "123456"
+  password: "137891"
 
 test:
   <<: *default
